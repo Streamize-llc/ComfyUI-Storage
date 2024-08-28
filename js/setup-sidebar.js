@@ -1,10 +1,10 @@
-import { SAVE_BUTTON_LABEL, LOAD_BUTTON_LABEL } from '../enum/button-label.js';
+import { SAVE_BUTTON_LABEL, LOAD_BUTTON_LABEL } from './enum/button-label.js';
 import {
   onClickLoadButton,
   onClickSaveCloudButton,
-} from '../utils/click-buttons.js';
+} from './utils/click-buttons.js';
 
-export function setupUI() {
+export function setupSidebar() {
   const menu = document.querySelector('.comfy-menu');
 
   const separator = createSeparator();

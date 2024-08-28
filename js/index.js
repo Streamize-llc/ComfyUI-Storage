@@ -1,5 +1,5 @@
 import { app } from '../../scripts/app.js';
-import { setupUI } from './ui/setup-ui.js';
+import { setupSidebar } from './setup-sidebar.js';
 
 app.registerExtension({
   name: 'Comfy.Storage',
@@ -7,6 +7,6 @@ app.registerExtension({
   init() {},
 
   async setup() {
-    setupUI();
+    setupSidebar();
   },
 });
