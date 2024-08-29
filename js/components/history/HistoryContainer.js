@@ -11,6 +11,13 @@ export default class HistoryContainer {
         updatedAt: new Date().toISOString,
         entries: null,
       }),
+      new HistoryItem({
+        id: 2,
+        title: 'Controlnet_2',
+        createdAt: new Date().toISOString,
+        updatedAt: new Date().toISOString,
+        entries: null,
+      }),
     ];
 
     this.createElement();

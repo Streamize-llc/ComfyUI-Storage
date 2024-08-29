@@ -12,12 +12,9 @@ export default class HistoryEntry {
   }
 
   createElement() {
-    // const detail = $el('div', {
-    //   textContent: ` / 수정일자: ${formatISOString(this.updatedAt)} / 버전: ${
-    //     this.version
-    //   }`,
-    // });
-
+    const createdAtTd = createTd(formatISOString(this.createdAt));
+    const updatedAtTd = createTd(formatISOString(this.updatedAt));
+    const versionTd = createTd(this.version);
     const deleteButton = $el('button', {
       textContent: '삭제',
       onclick: () => {
@@ -28,12 +25,7 @@ export default class HistoryEntry {
     const createTd = (content) => $el('td', { textContent: content });
 
     const createTr = () =>
-      $el('tr', [
-        createTd(formatISOString(this.createdAt)),
-        createTd(formatISOString(this.updatedAt)),
-        createTd(this.version),
-        deleteButton,
-      ]);
+      $el('tr', [createdAtTd, updatedAtTd, versionTd, deleteButton]);
 
     this.element = createTr();
   }
